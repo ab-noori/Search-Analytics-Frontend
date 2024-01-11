@@ -16,6 +16,7 @@
 ### 🛠 Built With 
 
   <ul>
-    <li>Rails</li>
-    <li>PostgreSQL</li>
+    <li>HTML</li>
+    <li>Bootstrap</li>
+    <li>Vanilla JS</li>
   </ul>
