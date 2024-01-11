@@ -104,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sendSearchRequest(query);
         sendArticleSearchRequest(query);
     
-        // After sending the search request, fetch and display recent searches
         fetchRecentSearches();
       }
     }    
@@ -122,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
       function displayArticles(articles) {
         const searchResultsContainer = document.getElementById('articlesContainer');
-        searchResultsContainer.innerHTML = ''; // Clear previous results
+        searchResultsContainer.innerHTML = ''; 
     
         if (articles.length === 0) {
           searchResultsContainer.innerHTML = '<p>No articles found.</p>';
@@ -136,7 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     
-      // Fetch and display articles when the page loads
       fetchArticles();
   });
   
@@ -161,7 +159,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
       console.log('Article added successfully:', data);
-      // Clear form fields after successful submission
       document.getElementById('articleTitle').value = '';
       document.getElementById('articleContent').value = '';
     })

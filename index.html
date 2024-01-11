@@ -1,0 +1,69 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Realtime Search Analytics</title>
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Realtime Search Analytics</h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="input-group mb-3">
+          <input type="text" id="searchInput" class="form-control" placeholder="Type your search...">
+          <button id="searchButton" class="btn btn-primary" type="button" onclick="search()">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-md-3">
+        <div class="border p-3">
+          <h4 class="mb-3">Add New Article</h4>
+          <form id="addArticleForm" class="mb-4">
+            <label for="articleTitle" class="form-label">Title:</label>
+            <input type="text" id="articleTitle" class="form-control" name="articleTitle" required>
+            <label for="articleContent" class="form-label">Content:</label>
+            <textarea id="articleContent" class="form-control" name="articleContent" rows="4" required></textarea>
+            <button type="button" onclick="addNewArticle()" class="btn btn-primary mt-3">Add Article</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="border p-3">
+          <h4 class="mb-3">Recent Articles</h4>
+          <div id="articlesContainer">
+            <!-- Articles come here -->
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="border p-3">
+          <h4 class="mb-3">Recent Searched Terms</h4>
+          <div id="recentSearchesContainer">
+            <!-- Recent searches will be dynamically displayed here -->
+          </div>
+        </div>
+      
+        <div class="border p-3">
+          <h4 class="mb-3">Trended Search Terms</h4>
+          <!-- Trended search terms will be dynamically displayed here -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
